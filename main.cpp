@@ -27,23 +27,23 @@ int main()
         courseList.addCourse(courseCode, grade, creditHours);
     }
 
-    cout << "\nCourses before deletions:" << endl;
+    cout << "Courses before deletions:" << endl;
     courseList.displayList();
 
-    cout << "\nEnter the course code of the course you want to delete: ";
+    cout << "Enter the course code of the course you want to delete: ";
     cin >> ws;
     getline(cin, courseCode);
     courseList.deleteCourse(courseCode);
 
-    cout << "\nCourses after first deletion:" << endl;
+    cout << "Courses after first deletion:" << endl;
     courseList.displayList();
 
-    cout << "\nEnter the course code of another course you want to delete: ";
+    cout << "Enter the course code of another course you want to delete: ";
     cin >> ws;
     getline(cin, courseCode);
     courseList.deleteCourse(courseCode);
 
-    cout << "\nCourses after second deletion:" << endl;
+    cout << "Courses after second deletion:" << endl;
     courseList.displayList();
 
     return 0;
