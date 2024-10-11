@@ -16,7 +16,7 @@ Course::~Course() {
     deleteAllNodes();
 }
 
-int Course::extractCourseNumber(const std::string& courseCode) const {
+int Course::extractCourseNumber(const string& courseCode) const {
     stringstream ss(courseCode);
     string prefix;
     int number;
@@ -24,7 +24,7 @@ int Course::extractCourseNumber(const std::string& courseCode) const {
     return number;
 }
 
-void Course::addCourse(const std::string& courseCode, int grade, int creditHours) {
+void Course::addCourse(const string& courseCode, int grade, int creditHours) {
     CourseNode* newNode = new CourseNode;
     newNode->courseCode = courseCode;
     newNode->grade = grade;
@@ -50,7 +50,7 @@ void Course::addCourse(const std::string& courseCode, int grade, int creditHours
     }
 }
 
-void Course::deleteCourse(const std::string& courseCode) {
+void Course::deleteCourse(const string& courseCode) {
     if (!head) {
         cout << "The list is empty. No course to delete." << endl;
         return;
